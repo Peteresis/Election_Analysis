@@ -19,6 +19,10 @@ La primera fila contiene los nombres de las columnas, que son los siguientes (de
 
 A partir de esas tres columnas se puede obtener el resto de la información para dar los resultados de la elección, segun se describe en la próxima sección.
 
+### **Fig. 1: Sample of the data received**
+![2017 Original Code results](https://github.com/Peteresis/stock-analysis/blob/b4ffa47a061043f21622863ba608c0ff3ee5832a/Resources/2017%20Original.png)
+
+
 
 
 
