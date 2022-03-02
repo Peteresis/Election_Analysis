@@ -33,10 +33,10 @@ After analyzing the data using the Python code created, the following report wit
 
 - How many votes were cast in this congressional election?
 
-Based on the data received, there were a total of '369,711' valid votes among the 3 counties audited.  It is not possible to determine the percentage of abstention nor the percentage of invalid or blank votes, since the data on the total number of registered voters and invalid or blank votes was not provided by the electoral commission authorities.
+Based on the data received, there were a total of `369,711` valid votes among the 3 counties audited.  It is not possible to determine the percentage of abstention nor the percentage of invalid or blank votes, since the data on the total number of registered voters and invalid or blank votes was not provided by the electoral commission authorities.
 
 This is the code used to read the data and calculate the total number of votes in the election:
-'''
+```
 # Imports Pandas Library and assigns it to the 'pd' variable
 import pandas as pd
 
@@ -60,7 +60,13 @@ Counties_List = list(set(Counties_List))
 
 # Count the total votes in the election
 totalVotesElection = df['Ballot ID'].count()
-'''
+```
+I chose the `pandas` Pyhton library over the `csv` library because it offers more sophisticated functionality for working with data read from a csv file.
+
+The code shown above reads the data from the CSV file and then generates a list of counties `Counties_List` and candidates `Candidates_List` that will be used later in the code to generate results by county and candidate.
+
+The total number of votes cast in the election is calculated by simply counting the number of rows in the first column `Ballot ID`, because each cell in this column contains a unique value, and so the number of elements in this column equals the total number of votes cast by the electors.
+
 
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
@@ -69,6 +75,30 @@ The total number of valid votes cast in each county is as follows:
   1. Denver: 82.8% (306,055)
   2. Jefferson: 10.5% (38,855)
   3. Arapahoe: 6.7% (24,801)
+
+Below is the code used to calculate the number of votes per county:
+
+```
+# Count of the votes per county
+Votes_By_County = []
+for County in Counties_List:
+    Result_County = df[df['County'] == County]
+    My_Index = Result_County.index
+    Number_Of_Votes = len(My_Index)
+    My_Tuple = (County, Number_Of_Votes)
+    Votes_By_County.append(My_Tuple)
+
+for County_Name, County_Votes in Votes_By_County:
+    County_Tuple = (County_Name, County_Votes)
+
+# Sort the Votes_By_County list to get the county with more votes
+# Reverse = True means that the list will have a descending order 
+Votes_By_County.sort(key=lambda x:x[1], reverse = True)
+My_Tuple_County_Winner = Votes_By_County[0]
+
+```
+The code creates an empty list called `Votes_By_County` and then loops through the list of counties created in the previous section `Counties_List` and for each element in the `Counties_List` counts the number of rows in the data that have the same county name.  Then, the code adds a new element to the list `Votes_By_County`.  The new element is added to a Tuple called `County_Tuple` which contains a pair of variables `County_Name` and `County_Votes`
+
 
 
 - Which county had the largest number of votes?
