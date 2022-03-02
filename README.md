@@ -97,11 +97,27 @@ Votes_By_County.sort(key=lambda x:x[1], reverse = True)
 My_Tuple_County_Winner = Votes_By_County[0]
 
 ```
-The code creates an empty list called `Votes_By_County` and then loops through the list of counties created in the previous section `Counties_List` and for each element in the `Counties_List` counts the number of rows in the data that have the same county name.  Then, the code adds a new element to the list `Votes_By_County`.  The new element is added to a Tuple called `County_Tuple` which contains a pair of variables `County_Name` and `County_Votes`
+The code generates an empty list called `Votes_By_County`, then loops through the list of counties produced in the previous section `Counties_List`, counting the number of rows in the data that have the same county name for each element in the `Counties_List`.
 
+The code then adds a new element to the list called `Votes_By_County`.
 
+The new element is added to the `County_Tuple`, which contains the variables `County_Name` and `County_Votes`.
+
+Finally, the list `Votes_By_County` is sorted in descending order using the `lambda` function from Python.
+
+The element `0` of `Votes_By_County` is copied to a Tuple called `My_Tuple_County_Winner` which contains the name of the county with higher vote turnout.  
 
 - Which county had the largest number of votes?
+
+The county with the largest number of votes was Denver with 82.8% of the total valid votes.  This result was not to be expected, since the population of the 3 counties analyzed  is similar:
+
+Information from the 2022 Census shows that the number of inhabitants in each of the 3 counties is:
+
+Denver     760,049
+
+Arapahoe   670,969
+
+Jefferson  593,348
 
 - Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 
