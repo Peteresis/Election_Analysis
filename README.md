@@ -1,10 +1,10 @@
 # Election Analysis
 
-**Module 3 Challenge**: Make use of Python language to open a CSV file containing the data with the congressional election results of three counties in the state of Colorado, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidadte that has won the election.
+**Module 3 Challenge**: Make use of Python language to open a CSV file containing the data with the congressional election results of three counties in the state of Colorado, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidate that has won the election.
 
 ## 1) Overview of Election Audit:
 
-The state election commission needs to analyze the results of the elections in 3 counties of the state, for this purpose we have received a `CSV file` containing `3 columns` and `369,712 rows` (including the row with the column headers).
+The state election commission needs to analyze the results of the elections in 3 counties of the state.  For this purpose we have received a `CSV file` containing `3 columns` and `369,712 rows` (including the row with the column headers).
 
 The election data does not contain information about blank votes or invalid votes.  **Each line of the CSV file corresponds to one valid vote**.  This information is very important since the total number of votes for each candidate or county is obtained by counting the number of lines that meet certain criteria.  
 
@@ -247,6 +247,8 @@ Python is a very versatile language with powerful libraries and functions to man
 The `369,712` rows of data contained in the `CSV file` are read very quickly and in a few seconds the table with the results of the analysis is obtained.
 
 The code created for this analysis is made in a generic way so that it can be used for other analyses without modification.  It does not matter the number of candidates or counties to be audited.  Simply load the data with the election results into a `CSV file` containing `3 columns` and name the columns `Ballot ID`, `County` and `Candidate`.  The name of the data file can be different from `election_results`, but it has to be included in line 9 at the beginning of the code, so that the computer can find the file and do the work.
+
+**PLEASE NOTE:** The column `Ballot ID` must contain unique values.  It does not matter if the values are numbers, letters or a combination, but no value in the column can be repeated or else the votes count will not be accurate.
 
 The complete code used in this analysis is included below:
 ```
