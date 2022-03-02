@@ -64,7 +64,7 @@ totalVotesElection = df['Ballot ID'].count()
 ```
 I chose the `pandas` Pyhton library over the `csv` library because it offers more sophisticated functionality for working with data read from a csv file.
 
-The code shown above reads the data from the CSV file and then generates a list of counties `Counties_List` and candidates `Candidates_List` that will be used later in the code to generate results by county and candidate.
+The code shown above reads the data from the CSV file and then generates a list of counties, `Counties_List`, and candidates, `Candidates_List`, that will be used later in the code to generate the results by county and candidate.
 
 The total number of votes cast in the election is calculated by simply counting the number of rows in the first column `Ballot ID`, because each cell in this column contains a unique value, and so the number of elements in this column equals the total number of votes cast by the electors.
 
