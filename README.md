@@ -109,7 +109,7 @@ The element `0` of `Votes_By_County` is copied to a Tuple called `My_Tuple_Count
 
 - Which county had the largest number of votes?
 
-The county with the largest number of votes was Denver with 82.8% of the total valid votes.  This result was not to be expected, since the population of the 3 counties analyzed  is similar:
+The county with the largest number of votes was Denver with 82.8% of the total valid votes.  This result was not to be expected, since the population of the 3 counties analyzed  is similar.
 
 Information from the 2022 Census shows that the number of inhabitants in each of the 3 counties is:
 
@@ -147,9 +147,16 @@ My_Tuple_Winner = Votes_Per_Candidate[0]
 
 ```
 
+The code shown above is a copy of the code used to obtain the results by county, but the names of the lists and tuples and variables was changed to use the word `Candidate` instead of `County`.
+
 - Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
 
+The election was won by the candidate `Diana DeGette` with a total of 272,892 votes or 73.8% of the votes cast in the 3 counties.  Certainly a landslide victory.
 
-
+The reader may have been expecting the analysis of the votes for each candidate in each county, however, that information was not part of the analysis requested for this challenge and therefore was not included in the code and in the analysis.
 
 ## 3) Election Audit-Summary
+
+
+
+
