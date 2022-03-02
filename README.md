@@ -5,7 +5,7 @@ Module 3 Challenge: Make use of Python language to open a CSV file containing th
 
 The state election commission needs to analyze the results of the elections in 3 counties of the state, for this purpose we have received a `CSV file` containing `3 columns` and `369,712 rows` (including the row with the column headers).
 
-The election data does not contain information about blank votes or invalid votes.  **Each line of the CSV file corresponds to one valid vote.  This information is very important since the total number of votes for each candidate or county is obtained by counting the number of lines that meet certain criteria.  
+The election data does not contain information about blank votes or invalid votes.  **Each line of the CSV file corresponds to one valid vote**.  This information is very important since the total number of votes for each candidate or county is obtained by counting the number of lines that meet certain criteria.  
 
 When reviewing the data received, we found the following:
 
