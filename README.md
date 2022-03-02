@@ -1,5 +1,6 @@
 # Election Analysis
-Module 3 Challenge: Make use of Python language to open a CSV file containing the data with the congressional election results of three counties in the state of Colorado, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidadte that has won the election.
+
+**Module 3 Challenge**: Make use of Python language to open a CSV file containing the data with the congressional election results of three counties in the state of Colorado, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidadte that has won the election.
 
 ## 1) Overview of Election Audit:
 
