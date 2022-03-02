@@ -19,12 +19,34 @@ The first row contains the column names, which are as follows (from left to righ
 
 From these three columns we can obtain the rest of the information to give the election results, as described in the next section.
 
-
-
-
 ### **Fig. 1: Sample of the data received**
 ![Sample of the Original Data Received](https://github.com/Peteresis/Election_Analysis/blob/985384a19c594494d89f71477fdba0e7eebf5ecc/Data%20Sample.png)
 
 ## 2) Election-Audit Results
+
+### ¿Cuáles fueron los resultados de la elección?
+
+Luego de analizar los datos usando el código de Python creado se obtuvo el siguiente reporte con los resultados de la eleccion:
+
+### **Fig. 2: Election Results Report Created with Python**
+![Sample of the Original Data Received](https://github.com/Peteresis/Election_Analysis/blob/985384a19c594494d89f71477fdba0e7eebf5ecc/Data%20Sample.png)
+
+
+
+- How many votes were cast in this congressional election?
+
+
+
+
+- Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
+
+- Which county had the largest number of votes?
+
+- Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
+
+ -Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+
+
+
 
 ## 3) Election Audit-Summary
