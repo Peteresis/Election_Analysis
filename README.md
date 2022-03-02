@@ -155,15 +155,19 @@ The election was won by the candidate `Diana DeGette` with a total of `272,892` 
 
 The reader may have been expecting the analysis of the votes for each candidate in each county, however, that information was not part of the analysis requested for this challenge and therefore was not included in the code and in the analysis.
 
+### Output Table
+
+Once all the work of reading the data, organize it and calculate the total votes is done, the program creates the results table shown in `Fig #2` above.  This table is printed on the screen and also printed in a `TXT File` called 
+
 ## 3) Election Audit-Summary
 
-Python es un lenguaje muy versátil que cuenta con poderosas librerías y funciones para manipular grandes cantidades de datos de una forma relativamente fácil.  El uso de listas permite acceder a la información muy fácilmente sin requerir grandes estructuras de código para obtener el valor de una variable en una fila o columna de una tabla de datos.
+Python is a very versatile language with powerful libraries and functions to manipulate large amounts of data in a relatively easy way.  The use of lists makes it possible to access information very easily without requiring large code structures to obtain the value of a variable in a row or column of a data table.
 
-Las `369,712` filas de datos contenidos en el archivo CSV son leídos muy rápidamente y en pocos segundos se obtiene la tabla con los resultados de la elección.
+The `369,712` rows of data contained in the `CSV file` are read very quickly and in a few seconds the table with the results of the analysis is obtained.
 
-El código creado para este análisis esta hecho de una forma genérica en la que se puede usar para otros análisis sin necesidad de modificarlo.  No importa el número de candidatos o de condados a auditar.  Simplemente hay que cargar los datos con los resultados de la elección en un archivo CSV que contenga 3 columnas y colocar los siguientes nombres a las columnas: `Ballot ID`, `County` and `Candidate`.  El nombre del archivo de datos puede ser diferente de `election_results`, pero hay que incluirlo en la línea 9 al comienzo del código, para que la computadora pueda encontrar el archivo y hacer el trabajo.
+The code created for this analysis is made in a generic way so that it can be used for other analyses without modification.  It does not matter the number of candidates or counties to be audited.  Simply load the data with the election results into a `CSV file` containing `3 columns` and name the columns `Ballot ID`, `County` and `Candidate`.  The name of the data file can be different from `election_results`, but it has to be included in line 9 at the beginning of the code, so that the computer can find the file and do the work.
 
-El código completo usado en este analisis se incluye a continuación:
+The complete code used in this analysis is included below:
 ```
 # Imports Pandas Library and assigns it to the 'pd' variable
 import pandas as pd
