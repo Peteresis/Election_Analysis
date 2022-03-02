@@ -113,13 +113,39 @@ The county with the largest number of votes was Denver with 82.8% of the total v
 
 Information from the 2022 Census shows that the number of inhabitants in each of the 3 counties is:
 
-Denver     760,049
+    - Denver     760,049
+    - Arapahoe   670,969
+    - Jefferson  593,348
 
-Arapahoe   670,969
-
-Jefferson  593,348
+The discrepancy in the number of votes cast in Denver County vs Arapahoe and Jefferson Counties suggests that the latter two counties had a significant rate of abstention.
 
 - Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
+
+There were 3 candidates in this election: Diana DeGette, Charles Casper Stockham and Raymon Anthony Doane.  The total number of votes obtained by each of the candidates was as follows:
+
+  1. Diana DeGette: 73.8% (272,892)
+  2. Charles Casper Stockham: 23.0% (85,213)
+  3. Raymon Anthony Doane: 3.1% (11,606)
+
+The code used to calculate the total number of votes per candidate is the following:
+
+```
+# Count of the votes per candidate
+Votes_Per_Candidate = []
+for Candidate in Candidates_List:
+    Result_Candidate = df[df['Candidate'] == Candidate]
+    My_Index = Result_Candidate.index
+    Number_Of_Votes = len(My_Index)
+    My_Tuple = (Candidate, Number_Of_Votes)
+    Votes_Per_Candidate.append(My_Tuple)
+
+
+# Sort the Votes_Per_Candidate list to get the winner
+# Reverse = True means that the list will have a descending order 
+Votes_Per_Candidate.sort(key=lambda x:x[1], reverse = True)
+My_Tuple_Winner = Votes_Per_Candidate[0]
+
+```
 
 - Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
 
