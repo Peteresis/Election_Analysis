@@ -45,7 +45,6 @@ import pandas as pd
 import os
 
 # Load data from CSV file
-# file_to_load = os.path.join("Resources", "short_election_results.csv")
 file_to_load = os.path.join("Resources", "election_results.csv")
 df = pd.read_csv(file_to_load)
 
@@ -158,7 +157,7 @@ The reader may have been expecting the analysis of the votes for each candidate 
 
 ### Output Table
 
-Once all the work of reading the data, organize it and calculate the total votes is done, the program creates the results table shown in `Fig #2` above.  This table is printed on the screen and also printed in a `TXT File` called `election_results.txt` included in the `Analysis` folder contained within this repository.
+Once all the work of reading the data, organize it and calculate the total votes is done, the program creates the results table shown in `Fig #2` above.  This table is printed on the screen and also printed to a `TXT File` called `election_results.txt`, included in the `Analysis` folder contained within this repository.
 
 The code that generates the output table on the screen consists of a series of `print` statements and a couple of lines to calculate the percentages of votes received by county or by candidate vs the total votes cast in the election.
 
@@ -244,9 +243,9 @@ sys.stdout = original_stdout # Reset the standard output to its original value
 
 Python is a very versatile language with powerful libraries and functions to manipulate large amounts of data in a relatively easy way.  The use of lists makes it possible to access information very easily without requiring large code structures to obtain the value of a variable in a row or column of a data table.
 
-The `369,712` rows of data contained in the `CSV file` are read very quickly and in a few seconds the table with the results of the analysis is obtained.
+The `369,712` rows of data contained in the `CSV file` are read very quickly and in a few seconds the table with the results of the analysis is generated.
 
-The code created for this analysis is made in a generic way so that it can be used for other analyses without modification.  It does not matter the number of candidates or counties to be audited.  Simply load the data with the election results into a `CSV file` containing `3 columns` and name the columns `Ballot ID`, `County` and `Candidate`.  The name of the data file can be different from `election_results`, but it has to be included in line 9 at the beginning of the code, so that the computer can find the file and do the work.
+The code created for this analysis is made in a generic way so that it can be used for other analyses without modification.  It does not matter the number of candidates or counties to be audited.  Simply load the data with the election results into a `CSV file` containing `3 columns` and name the columns `Ballot ID`, `County` and `Candidate`.  The name of the data file can be different from `election_results`, but it has to be included in 8th line at the beginning of the code, so that the computer can find the file and do the work.
 
 **PLEASE NOTE:** The column `Ballot ID` must contain unique values.  It does not matter if the values are numbers, letters or a combination, but no value in the column can be repeated or else the votes count will not be accurate.
 
@@ -259,7 +258,6 @@ import pandas as pd
 import os
 
 # Load data from CSV file
-# file_to_load = os.path.join("Resources", "short_election_results.csv")
 file_to_load = os.path.join("Resources", "election_results.csv")
 df = pd.read_csv(file_to_load)
 
