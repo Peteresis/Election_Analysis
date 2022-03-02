@@ -24,12 +24,12 @@ From these three columns we can obtain the rest of the information to give the e
 
 ## 2) Election-Audit Results
 
-### ¿Cuáles fueron los resultados de la elección?
+### What were the results of the election?
 
-Luego de analizar los datos usando el código de Python creado se obtuvo el siguiente reporte con los resultados de la eleccion:
+After analyzing the data using the Python code created, the following report with the results of the election was obtained:
 
 ### **Fig. 2: Election Results Report Created with Python**
-![Sample of the Original Data Received](https://github.com/Peteresis/Election_Analysis/blob/985384a19c594494d89f71477fdba0e7eebf5ecc/Data%20Sample.png)
+![Election Results Report](https://github.com/Peteresis/Election_Analysis/blob/a090a38f23e9e0bbc69fa9b851f1efc2a543875c/Election_Results.png)
 
 
 
@@ -44,7 +44,7 @@ Luego de analizar los datos usando el código de Python creado se obtuvo el sigu
 
 - Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 
- -Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+- Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
 
 
 
