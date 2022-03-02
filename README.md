@@ -33,7 +33,34 @@ After analyzing the data using the Python code created, the following report wit
 
 - How many votes were cast in this congressional election?
 
-Based on the data received, there were a total of 369,711 valid votes among the 3 counties audited.  It is not possible to determine the percentage of abstention nor the percentage of invalid or blank votes, since the data on the total number of registered voters and invalid or blank votes was not provided by the electoral commission authorities.
+Based on the data received, there were a total of '369,711' valid votes among the 3 counties audited.  It is not possible to determine the percentage of abstention nor the percentage of invalid or blank votes, since the data on the total number of registered voters and invalid or blank votes was not provided by the electoral commission authorities.
+
+This is the code used to read the data and calculate the total number of votes in the election:
+'''
+# Imports Pandas Library and assigns it to the 'pd' variable
+import pandas as pd
+
+# Import os library
+import os
+
+# Load data from CSV file
+# file_to_load = os.path.join("Resources", "short_election_results.csv")
+file_to_load = os.path.join("Resources", "election_results.csv")
+df = pd.read_csv(file_to_load)
+
+# Creates a list of candidates from the dataframe
+Candidates_List = df['Candidate'].values.tolist()
+# Removes duplicates from the list of Candidates
+Candidates_List = list(set(Candidates_List))
+
+# Creates a list of counties from the dataframe
+Counties_List = df['County'].values.tolist()
+# Removes duplicates from the list of Counties
+Counties_List = list(set(Counties_List))
+
+# Count the total votes in the election
+totalVotesElection = df['Ballot ID'].count()
+'''
 
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
