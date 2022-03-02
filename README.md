@@ -157,7 +157,87 @@ The reader may have been expecting the analysis of the votes for each candidate 
 
 ### Output Table
 
-Once all the work of reading the data, organize it and calculate the total votes is done, the program creates the results table shown in `Fig #2` above.  This table is printed on the screen and also printed in a `TXT File` called 
+Once all the work of reading the data, organize it and calculate the total votes is done, the program creates the results table shown in `Fig #2` above.  This table is printed on the screen and also printed in a `TXT File` called `election_results.txt` included in the `Analysis` folder contained within this repository.
+
+The code that generates the output table on the screen consists of a series of `print` statements and a couple of lines to calculate the percentages of votes received by county or by candidate vs the total votes cast in the election.
+
+```
+# Output of the election results on screen
+print()
+print("Election Results")
+print("-------------------------")
+print("Total Votes: {:,}".format(totalVotesElection))
+print("-------------------------")
+print()
+print("County Votes:")
+for County_Name, County_Votes in Votes_By_County:
+    CountyVotesPercentage = (County_Votes/totalVotesElection)
+    # Note: the sep = '' at the end of the line keeps the spacing between variables and strings as a minimum.  It means Separator = Empty String
+    print(County_Name,": ", "{:.1%}".format(CountyVotesPercentage), " ({:,})".format(County_Votes), sep = '')
+print()
+print("-------------------------")
+print("Largest County Turnout: ", My_Tuple_County_Winner[0])
+print("-------------------------")
+print()
+for Candidate, Number_Of_Votes in Votes_Per_Candidate:
+    CandidateVotesPercentage = (Number_Of_Votes/totalVotesElection)
+    # Note: the sep = '' at the end of the line keeps the spacing between variables and strings as a minimum.  It means Separator = Empty String
+    print(Candidate,": ", "{:.1%}".format(CandidateVotesPercentage), " ({:,})".format(Number_Of_Votes), sep = '')
+print()
+print("-------------------------")
+print("Winner:", My_Tuple_Winner[0])
+print("Winning Vote Count:", "{:,}".format(My_Tuple_Winner[1]))
+Winning_Percentage = My_Tuple_Winner[1]/totalVotesElection
+print("Winning Percentage:","{:.1%}".format(Winning_Percentage))
+print("-------------------------")
+print()
+```
+For the `TXT File` we used a "trick" and changed the standard output from the screen to a file using the `sys library` from Python.  This change allows to print the output table to a TXT File with minimal modifications to the code shown above.  
+
+```
+# Output of the election results to a TXT file
+# Create a filename variable to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_results.txt")
+
+# We use the sys library to redirect the print() function to write to a file instead of the screen
+# and use the same print structure created for the screen section above 
+import sys
+
+original_stdout = sys.stdout # Save a reference to the original standard output
+
+with open(file_to_save, 'w') as f:
+    sys.stdout = f # Change the standard output to the file we created.
+    print()
+    print("Election Results")
+    print("-------------------------")
+    print("Total Votes: {:,}".format(totalVotesElection))
+    print("-------------------------")
+    print()
+    print("County Votes:")
+    for County_Name, County_Votes in Votes_By_County:
+        CountyVotesPercentage = (County_Votes/totalVotesElection)
+        # Note: the sep = '' at the end of the line keeps the spacing between variables and strings as a minimum.  It means Separator = Empty String
+        print(County_Name,": ", "{:.1%}".format(CountyVotesPercentage), " ({:,})".format(County_Votes), sep = '')
+    print()
+    print("-------------------------")
+    print("Largest County Turnout: ", My_Tuple_County_Winner[0])
+    print("-------------------------")
+    print()
+    for Candidate, Number_Of_Votes in Votes_Per_Candidate:
+        CandidateVotesPercentage = (Number_Of_Votes/totalVotesElection)
+        # Note: the sep = '' at the end of the line keeps the spacing between variables and strings as a minimum.  It means Separator = Empty String
+        print(Candidate,": ", "{:.1%}".format(CandidateVotesPercentage), " ({:,})".format(Number_Of_Votes), sep = '')
+    print()
+    print("-------------------------")
+    print("Winner:", My_Tuple_Winner[0])
+    print("Winning Vote Count:", "{:,}".format(My_Tuple_Winner[1]))
+    Winning_Percentage = My_Tuple_Winner[1]/totalVotesElection
+    print("Winning Percentage:","{:.1%}".format(Winning_Percentage))
+    print("-------------------------")
+    print()
+f.close()
+sys.stdout = original_stdout # Reset the standard output to its original value
+```
 
 ## 3) Election Audit-Summary
 
