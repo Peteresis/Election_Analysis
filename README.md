@@ -1,5 +1,5 @@
 # Election Analysis
-Module 3 Challenge: Make use of Python language to open a CSV file contianing the data with the congressional election results of three counties, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidadte that has won the election.
+Module 3 Challenge: Make use of Python language to open a CSV file containing the data with the congressional election results of three counties in the state of Colorado, calculate the total votes in the election, the total votes per county and per candidate and indicate the candidadte that has won the election.
 
 ## 1) Overview of Election Audit:
 
@@ -31,14 +31,18 @@ After analyzing the data using the Python code created, the following report wit
 ### **Fig. 2: Election Results Report Created with Python**
 ![Election Results Report](https://github.com/Peteresis/Election_Analysis/blob/a090a38f23e9e0bbc69fa9b851f1efc2a543875c/Election_Results.png)
 
-
-
 - How many votes were cast in this congressional election?
 
-
-
+Based on the data received, there were a total of 369,711 valid votes among the 3 counties audited.  It is not possible to determine the percentage of abstention nor the percentage of invalid or blank votes, since the data on the total number of registered voters and invalid or blank votes was not provided by the electoral commission authorities.
 
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
+
+The total number of valid votes cast in each county is as follows:
+
+  1. Denver: 82.8% (306,055)
+  2. Jefferson: 10.5% (38,855)
+  3. Arapahoe: 6.7% (24,801)
+
 
 - Which county had the largest number of votes?
 
